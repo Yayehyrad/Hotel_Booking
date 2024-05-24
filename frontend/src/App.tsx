@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import { SignInForm } from "./components/auth/SignIn";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +17,7 @@ function App() {
       children: [
         { path: "/", element: <Home /> },
         { path: "/register", element: <Register /> },
-        // { path: "/cart", element: <Cart /> },
+        { path: "/signin", element: <SignInForm /> },
         // { path: "/order", element: <Order /> },
         // { path: "/order/new", element: <CreateOrder /> },
       ],

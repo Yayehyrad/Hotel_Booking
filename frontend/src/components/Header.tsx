@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import useIsLogedIn from "../hooks/isLogedIn";
+import SignOutButton from "./auth/SignOutButton";
 // import { useAppContext } from "../contexts/AppContext";
 // import SignOutButton from "./SignOutButton";
 
 const Header = () => {
-  const isLoggedIn = false;
-  // useAppContext();
+  const { isLoggedIn } = useIsLogedIn();
 
   return (
     <div className="bg-blue-800 py-6">
@@ -27,11 +28,11 @@ const Header = () => {
               >
                 My Hotels
               </Link>
-              {/* <SignOutButton /> */}
+              <SignOutButton />
             </>
           ) : (
             <Link
-              to="/sign-in"
+              to="/signin"
               className="flex bg-white items-center text-blue-600 px-3 font-bold hover:bg-gray-100"
             >
               Sign In
