@@ -59,7 +59,7 @@ function ManageHotelForm({ onSave, isLoading, hotel }: Props) {
       });
     }
 
-    Array.from(formDataJson.imageFiles).forEach((imageFile) => {
+    Array.from(formDataJson.imageFiles).forEach((imageFile: any) => {
       formData.append(`imageFiles`, imageFile);
     });
 
