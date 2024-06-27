@@ -31,6 +31,7 @@ function ManageHotelForm({ onSave, isLoading, hotel }: Props) {
   const { handleSubmit, reset } = formMethods;
 
   useEffect(() => {
+    console.log(hotel);
     reset(hotel);
   }, [hotel, reset]);
 

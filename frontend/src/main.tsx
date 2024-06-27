@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Toaster } from "react-hot-toast";
+import { SearchContextProvider } from "./contexts/SearchContext.tsx";
+import { AppContextProvider } from "./contexts/AppContext.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,7 +19,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <App />
+        <AppContextProvider>
+          <SearchContextProvider>
+            <App />
+          </SearchContextProvider>
+        </AppContextProvider>
         <Toaster />
       </React.Suspense>
     </QueryClientProvider>

@@ -7,6 +7,13 @@ import Register from "./pages/Register";
 import { SignInForm } from "./components/auth/SignIn";
 import HotelsForm from "./pages/HotelsForm";
 import useIsLogedIn from "./hooks/isLogedIn";
+import MyHotels from "./pages/MyHotels";
+import EditHotel from "./pages/EditHotel";
+// import SearchBar from "./components/search/SearchBar";
+import Search from "./pages/Search";
+import Detail from "./pages/Detail";
+import Booking from "./pages/Booking";
+import MyBookings from "./pages/MyBookings";
 
 function App() {
   const { isLoggedIn } = useIsLogedIn();
@@ -24,7 +31,16 @@ function App() {
         isLoggedIn
           ? { path: "/add-hotel", element: <HotelsForm /> }
           : { path: "/add-hotel", element: <SignInForm /> },
-        // { path: "/order/new", element: <CreateOrder /> },
+        isLoggedIn
+          ? { path: "/my-hotels", element: <MyHotels /> }
+          : { path: "/my-hotels", element: <MyHotels /> },
+        isLoggedIn
+          ? { path: "/edit-hotel/:hotelId", element: <EditHotel /> }
+          : { path: "/edit-hotel/:hotelId", element: <EditHotel /> },
+        { path: "/search", element: <Search /> },
+        { path: "/detail/:hotelId", element: <Detail /> },
+        { path: "/hotel/:hotelId/booking", element: <Booking /> },
+        { path: "/my-bookings", element: <MyBookings /> },
       ],
     },
   ]);

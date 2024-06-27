@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 import userRouter from "./routes/user/user.route";
 import authRouter from "./routes/auth/auth.route";
 import myHotelRouter from "./routes/hotel/myHotel.route";
+import hotelRouter from "./routes/hotel/hotel.router";
+import myBookingRouter from "./routes/my-booking/my-bookings";
 import dotenv from "dotenv";
 import path from "path";
 import { v2 as cloudinary } from "cloudinary";
@@ -31,6 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/user", userRouter);
 app.use("/auth", authRouter);
 app.use("/my-hotels", myHotelRouter);
+app.use("/hotels", hotelRouter);
+app.use("/my-bookings", myBookingRouter);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
