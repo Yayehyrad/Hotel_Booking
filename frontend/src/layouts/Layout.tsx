@@ -19,7 +19,7 @@ const Layout = () => {
       <Header />
       <Hero />
       <div className="container mx-auto">{/* <SearchBar /> */}</div>
-      <main className="container mx-auto py-10 flex-1">
+      <main className=" w-full  mx-auto py-0 flex-1">
         <Outlet />
       </main>
       <Footer />

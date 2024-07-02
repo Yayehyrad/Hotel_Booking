@@ -2,7 +2,7 @@
 import Layout from "./layouts/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from "./pages/Home";
+import { Home } from "./pages/Home/index";
 import Register from "./pages/Register";
 import { SignInForm } from "./components/auth/SignIn";
 import HotelsForm from "./pages/HotelsForm";
@@ -14,6 +14,10 @@ import Search from "./pages/Search";
 import Detail from "./pages/Detail";
 import Booking from "./pages/Booking";
 import MyBookings from "./pages/MyBookings";
+import "./css/style.css";
+import "./css/animate.css";
+import "./css/animate.min.css";
+import "./css/bootstrap.min.css";
 
 function App() {
   const { isLoggedIn } = useIsLogedIn();

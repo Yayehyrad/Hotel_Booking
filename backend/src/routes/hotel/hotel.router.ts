@@ -58,7 +58,7 @@ router.get("/search", async (req: Request, res: Response) => {
 
 router.get("/", async (req: Request, res: Response) => {
   try {
-    const hotels = await Hotel.find().sort("-lastUpdated");
+    const hotels = await Hotel.find().sort("-lastUpdated").limit(6);
     res.json(hotels);
   } catch (error) {
     console.log("error", error);
