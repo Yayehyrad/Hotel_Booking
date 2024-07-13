@@ -27,9 +27,9 @@ export function SignInForm() {
   const mutation = useMutation(clientApi.signIn, {
     onSuccess: async () => {
       toast.success("Sign In success!");
-      await queryClient.invalidateQueries("validateToken");
-      console.log(location.state?.from);
+      console.log(location.state);
       navigate(location.state?.from?.pathname || "/");
+      await queryClient.invalidateQueries("validateToken");
     },
     onError: () => {
       toast.error("ad");
