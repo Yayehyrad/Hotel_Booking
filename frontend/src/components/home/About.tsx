@@ -1,5 +1,3 @@
-import React from "react";
-import Heading from "../common/Heading";
 import { about } from "../data/Data";
 
 export default function About() {
@@ -44,7 +42,7 @@ export default function About() {
               <div className="row g-3">
                 <div className="col-6 text-end">
                   <img
-                    className="img-fluid rounded w-75 wow zoomIn"
+                    className="img-fluid rounded w-75 float-right wow zoomIn  transition-all duration-75 hover:scale-110 shadow-xl"
                     data-wow-delay="0.1s"
                     src="/assets/img/about-1.jpg"
                     style={{ marginTop: "25%" }}
@@ -52,21 +50,21 @@ export default function About() {
                 </div>
                 <div className="col-6 text-start">
                   <img
-                    className="img-fluid rounded w-100 wow zoomIn"
+                    className="img-fluid rounded w-100 wow zoomIn  transition-all duration-75 hover:scale-110 shadow-xl"
                     data-wow-delay="0.3s"
                     src="/assets/img/about-2.jpg"
                   />
                 </div>
                 <div className="col-6 text-end">
                   <img
-                    className="img-fluid rounded w-50 wow zoomIn"
+                    className="img-fluid rounded  w-100 wow zoomIn  transition-all duration-75 hover:scale-110 shadow-xl"
                     data-wow-delay="0.5s"
                     src="/assets/img/about-3.jpg"
                   />
                 </div>
                 <div className="col-6 text-start">
                   <img
-                    className="img-fluid rounded w-75 wow zoomIn"
+                    className="img-fluid rounded w-75 wow zoomIn  transition-all duration-75 hover:scale-110 shadow-xl"
                     data-wow-delay="0.7s"
                     src="/assets/img/about-4.jpg"
                   />
