@@ -1,7 +1,15 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Heading({ heading, title, subtitle }) {
+export default function Heading({
+  heading,
+  title,
+  subtitle,
+}: {
+  heading: string;
+  title: string;
+  subtitle: string;
+}) {
   return (
     <>
       <div className="container-fluid page-header mb-5 p-0 bg-image">

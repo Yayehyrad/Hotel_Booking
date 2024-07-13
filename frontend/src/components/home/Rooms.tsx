@@ -1,6 +1,5 @@
-import React from "react";
 import CommonHeading from "../common/CommonHeading";
-import { facility, roomItems } from "../data/Data";
+import { facility } from "../data/Data";
 import * as apiClient from "../../api-client";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ export default function Rooms() {
         <div className="container">
           <CommonHeading heading="Latest Places" title="" subtitle="Explore" />
           <div className="row g-4">
-            {hotels.map((item, key) => (
+            {hotels.map((item) => (
               <div
                 className="col-lg-4 col-md-6 wow fadeInUp"
                 data-wow-delay="0.1s"
@@ -39,7 +38,7 @@ export default function Rooms() {
                       <div className="ps-2">{item.starRating}</div>
                     </div>
                     <div className="d-flex mb-3">
-                      {facility.map((item, index) => (
+                      {facility.map((item) => (
                         <small className="border-end me-3 pe-3">
                           {item.icon}
                           {item.quantity} {item.facility}

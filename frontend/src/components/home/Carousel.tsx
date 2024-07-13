@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,12 +9,14 @@ export default function Carousel() {
 
   const next = () => {
     if (sliderRef.current) {
+      // @ts-expect-error it is defined
       sliderRef.current.slickNext();
     }
   };
 
   const previous = () => {
     if (sliderRef.current) {
+      // @ts-expect-error it is defined
       sliderRef.current.slickPrev();
     }
   };

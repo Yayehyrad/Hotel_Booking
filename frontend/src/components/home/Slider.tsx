@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { testimonial } from "../data/Data";
 
 import Slider from "react-slick";

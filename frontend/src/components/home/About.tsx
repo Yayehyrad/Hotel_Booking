@@ -23,7 +23,7 @@ export default function About() {
                 ensure your stay exceeds all expectations.
               </p>
               <div className="row g-3 pb-4">
-                {about.map((item, key) => (
+                {about.map((item) => (
                   <div className="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                     <div className="border rounded p-1">
                       <div className="border rounded text-center p-4">
